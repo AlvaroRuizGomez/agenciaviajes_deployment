@@ -19,4 +19,4 @@ module.exports = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, proce
     },
     operatorsAliases: false
 
-});
+})
