@@ -49,7 +49,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Cargar las rutas
 app.use('/', routes());
 
-/** Haciendo el Deploymen
+/** Haciendo el Deployment
  ** Puerto y host para la app 
  ** Dejamos el HOST y PORT libres para que heroku se los asigne, en caso contrario se los damos'0.0.0.0' 3000 */
 const host = process.env.HOST || '0.0.0.0';

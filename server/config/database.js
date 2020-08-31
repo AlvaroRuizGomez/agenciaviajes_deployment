@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 require('dotenv').config({ path: 'variables.env' })
 
-/* Comprobando lectura a la BD para el Deployment
-console.log(process.env.BD_HOST, process.env.BD_NOMBRE);*/
+// /* Comprobando lectura a la BD para el Deployment*/
+// console.log(process.env.BD_HOST);
 
 module.exports = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, {
     host: process.env.BD_HOST,
