@@ -28,13 +28,16 @@ exports.mostrarTestimoniales = async (req, res) => {
         // muestra la vista con errores
         const testimoniales = await Testimonial.findAll()
         res.render('testimoniales', {
-            erores,
+            errores,
             nombre,
             correo,
             mensaje,
             pagina: 'Testimoniales',
             testimoniales
         })
+        // *************************************
+        .catch(error => console.log(error));
+        // ************************************
         
 
 
@@ -46,6 +49,6 @@ exports.mostrarTestimoniales = async (req, res) => {
             mensaje
         })
         .then(testimonial => res.redirect('/testimoniales'))
-        .catch(error => console.log(error));
+        .catch(error => console.log('Almacena en la BD Error:', error));
     }
 }
