@@ -10,12 +10,13 @@ const Viaje = require('../models/Viajes');
         .catch(error => console.log(error))
  } */
  /* como se hace acon async await */
- exports.mostrarViajes = async (req, res) => {
+ exports.mostrarViajes =  async (req, res) => {
     const viajes = await Viaje.findAll()
     res.render('viajes', {
         pagina: 'Próximos Viajes',
         viajes
-    });
+    })
+    // .catch(error => console.log(error))
 }
 
  exports.mostrarViaje = async (req, res) => {
@@ -23,4 +24,5 @@ const Viaje = require('../models/Viajes');
     res.render('viaje', {
         viaje
     })
+    // .catch(error => console.log(error))
 }

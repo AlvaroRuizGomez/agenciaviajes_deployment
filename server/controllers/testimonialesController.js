@@ -35,11 +35,6 @@ exports.mostrarTestimoniales = async (req, res) => {
             pagina: 'Testimoniales',
             testimoniales
         })
-        // *************************************
-        .catch(error => console.log(error));
-        // ************************************
-        
-
 
     } else {
         // almacena en la BD
